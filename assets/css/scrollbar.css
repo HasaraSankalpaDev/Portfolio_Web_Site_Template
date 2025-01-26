@@ -1,0 +1,17 @@
+html{
+    scroll-behavior: smooth !important;
+}
+
+::-webkit-scrollbar{
+    background: transparent !important;
+    opacity: 0 !important;
+}
+::-webkit-scrollbar-track{
+    background: transparent !important;
+    opacity: 0 !important;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:  #f6f784 !important;
+    border-radius: 100px;
+}

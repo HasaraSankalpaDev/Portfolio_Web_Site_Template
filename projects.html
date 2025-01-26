@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/images/logo.png" >
+    <title>My Projects</title>
+</head>
+<body>
+<!-- WORK -->
+<div id="work" class="full-height px-lg-5">
+    <div class="container">
+        <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item" style="color: var(--color-brand) !important;"><a href="index.html" class="text-brand">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">About Me</li>
+            </ol>
+          </nav>
+
+        <div class="row pb-4  pt-4" data-aos="fade-up">
+            <div class="col-lg-8">
+                <h4 class="text-brand">WORK</h6>
+                <h1>My Recent Projects</h1>
+            </div>
+        </div>
+
+        <div class="row gy-4">
+
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="card-custom rounded-0 bg-base h-100">
+                    <div class="card-custom-image rounded-0">
+                        <img src="assets/images/bg.jpeg" class="gallery-item" alt="gallery">                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<!---------- Modal -->
+<div class="modal fade bg-transparent" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-base">
+            <div class="modal-header">
+                <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                <button type="button" class="btn-close text-danger bg-danger p-3 rounded-circle " data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="./assets/images/banner.jpg" class="modal-img" alt="modal img">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    document.addEventListener("click",function (e){
+        if(e.target.classList.contains("gallery-item")){
+            const src = e.target.getAttribute("src");
+            document.querySelector(".modal-img").src = src;
+            const myModal = new bootstrap.Modal(document.getElementById('gallery-modal'));
+            myModal.show();
+        }
+    })
+</script>
+
+<script src="./assets/js/typed.umd.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/aos.js"></script>
+<script src="./assets/js/main.js"></script>
+
+</body>
+</html>
